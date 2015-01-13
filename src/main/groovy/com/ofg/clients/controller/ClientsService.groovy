@@ -39,7 +39,7 @@ class ClientsService {
     }
 
     @RequestMapping(value = "/client", method = RequestMethod.POST)
-    void retrieveClient(@ModelAttribute Client client) {
+    void retrieveClient(Client client) {
         def clientObject = new BasicDBObject('firstName', client.firstName)
             .append('lastName', client.lastName)
             .append('age', client.age)
