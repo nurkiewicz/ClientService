@@ -8,6 +8,7 @@ import com.ofg.clients.model.Client
 import com.ofg.infrastructure.web.resttemplate.fluent.ServiceRestClient
 import com.wordnik.swagger.annotations.Api
 import groovy.util.logging.Slf4j
+import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.ModelAttribute
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RequestMethod
@@ -22,7 +23,8 @@ import static com.ofg.clients.config.Collaborators.REPORTING_SERVICE_URL
 @Api(value = "client", description = "Operations on clients")
 class ClientsService {
 
-    private final ServiceRestClient serviceRestClient
+    @Autowired
+    private ServiceRestClient serviceRestClient
 
     Fongo fongo
 
@@ -30,8 +32,7 @@ class ClientsService {
 
     DBCollection collection
 
-    ClientsService(ServiceRestClient serviceRestClient) {
-        this.serviceRestClient = serviceRestClient
+    public ClientsService() {
         fongo = new Fongo("ClientsService mongo server")
         db = fongo.getDB("ClientsServiceDb")
         collection = db.getCollection("clients")
