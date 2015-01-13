@@ -58,7 +58,7 @@ uploadArchives {
             authentication(userName: 'admin', password: 'admin123')
         }
         pom.version = currentVersion
-        pom.artifactId = 'ui'
+        pom.artifactId = 'reporting-service'
         pom.groupId = 'com.ofg'
     }
 }
