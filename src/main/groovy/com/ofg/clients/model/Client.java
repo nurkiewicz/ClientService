@@ -8,7 +8,7 @@ public class Client {
 
     Integer age;
 
-    Long loanId;
+    String loanId;
 
     public String getFirstName() {
         return firstName;
@@ -22,7 +22,7 @@ public class Client {
         return age;
     }
 
-    public Long getLoanId() {
+    public String getLoanId() {
         return loanId;
     }
 
@@ -38,7 +38,7 @@ public class Client {
         this.age = age;
     }
 
-    public void setLoanId(Long loanId) {
+    public void setLoanId(String loanId) {
         this.loanId = loanId;
     }
 }
