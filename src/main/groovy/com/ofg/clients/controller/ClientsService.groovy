@@ -9,6 +9,7 @@ import com.ofg.infrastructure.web.resttemplate.fluent.ServiceRestClient
 import com.wordnik.swagger.annotations.Api
 import groovy.util.logging.Slf4j
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.http.MediaType
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RequestMethod
@@ -19,7 +20,7 @@ import static com.ofg.clients.config.Collaborators.REPORTING_SERVICE_URL
 
 @Slf4j
 @RestController
-@RequestMapping('/api')
+@RequestMapping(value = '/api', consumes = [MediaType.APPLICATION_JSON_VALUE], produces = [MediaType.APPLICATION_JSON_VALUE])
 @Api(value = "client", description = "Operations on clients")
 class ClientsService {
 
