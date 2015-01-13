@@ -2,7 +2,7 @@
     "pl": {
         "this": "com/ofg/client-service",
         "dependencies": {
-            "collerator": "com/ofg/reporting-service"
+            "reporting": "com/ofg/reporting-service"
         }
     }
 }

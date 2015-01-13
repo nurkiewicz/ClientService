@@ -9,7 +9,7 @@ import com.ofg.infrastructure.web.resttemplate.fluent.ServiceRestClient
 import com.wordnik.swagger.annotations.Api
 import groovy.util.logging.Slf4j
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.web.bind.annotation.ModelAttribute
+import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RequestMethod
 import org.springframework.web.bind.annotation.RestController
@@ -39,7 +39,7 @@ class ClientsService {
     }
 
     @RequestMapping(value = "/client", method = RequestMethod.POST)
-    void retrieveClient(Client client) {
+    public void retrieveClient(@RequestBody Client client) {
         def clientObject = new BasicDBObject('firstName', client.firstName)
             .append('lastName', client.lastName)
             .append('age', client.age)
