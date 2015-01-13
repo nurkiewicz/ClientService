@@ -51,8 +51,8 @@ class ClientsService {
             .post()
             .onUrl(REPORTING_SERVICE_URL)
             .body(client)
-            .anObject()
-            .ofType(Client)
+            .withHeaders()
+            .contentTypeJson()
     }
 
 }
