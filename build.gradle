@@ -129,7 +129,7 @@ dependencies {
     compile 'net.sf.ehcache:ehcache:2.9.0'
     compile 'com.github.fakemongo:fongo:1.5.10'
     compile 'ch.qos.logback:logback-classic:1.1.1'
-    compile 'org.mongodb:casbah_2.11:2.8.0-RC1'
+    compile 'org.mongodb:casbah_2.10:2.8.0-RC1'
 
     // microservices
     compile ("com.ofg:micro-infra-spring-boot-starter:$microInfraSpringVersion") {
